@@ -20,38 +20,39 @@ endorsements = {
     "img2": "https://i.imgur.com/RM31sfq.jpeg",
     "img3": "https://i.imgur.com/p1KQB0n.jpeg",
     "img4": "https://i.imgur.com/WvAF7Im.jpeg"
-
-    # Puedes agregar más imágenes así:
-    # "img4": "URL_de_tu_imagen",
-    # "img5": "URL_de_tu_imagen"
 }
 
-# ==== ESTILOS PERSONALIZADOS EN COLOR MARRÓN ====
+# ==== ESTILOS PERSONALIZADOS EN FONDO NEGRO CLARO ====
 st.markdown("""
     <style>
-        body {
-            background-color: #5d4037;
+        .stApp {
+            background-color: #121212;  /* negro claro / gris muy oscuro */
+            color: #e0e0e0;
         }
         h1, h2, h3, h4 {
-            color: #ffe0b2;
+            color: #f1c40f;  /* amarillo dorado para destacar títulos */
             font-family: 'Comic Sans MS', cursive, sans-serif;
         }
-        .stApp {
-            background-color: #5d4037;
-            color: #fbe9e7;
-        }
         .stSubheader, .stText, .stMarkdown {
-            color: #fbe9e7;
+            color: #e0e0e0;
         }
         a {
-            color: #ffccbc;
+            color: #f39c12;  /* naranja */
             text-decoration: none;
         }
         a:hover {
-            color: #fff3e0;
+            color: #f1c40f;
         }
         .emoji {
             font-size: 24px;
+        }
+        img {
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        hr {
+            border: 1px solid #444;
+            margin: 25px 0;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -71,6 +72,8 @@ with st.container():
     with col2:
         st.markdown(f"📧 **Email:** [{info['Email']}](mailto:{info['Email']})")
 
+st.markdown("---")
+
 # ==== EXPERIENCIA ====
 with st.container():
     st.subheader("💼 Experiencia laboral")
@@ -85,6 +88,8 @@ with st.container():
     st.write("""
     Aplicar la comunicación estratégica, el diseño y la tecnología para impulsar proyectos con sentido, propósito e impacto positivo en la sociedad.
     """)
+
+st.markdown("---")
 
 # ==== HABILIDADES ====
 with st.container():
@@ -104,6 +109,8 @@ with st.container():
     🗓️ Certificación en Marketing y Comunicaciones con COREPUCP
     """)
 
+st.markdown("---")
+
 # ==== LOGROS ====
 with st.container():
     st.subheader("🏆 Logros")
@@ -118,6 +125,8 @@ with st.container():
     st.subheader("⚠️ Debilidades")
     st.write("Es exigente consigo misma y revisa mucho antes de compartir, pero eso asegura calidad y coherencia.")
 
+st.markdown("---")
+
 # ==== GALERÍA ====
 with st.container():
     st.subheader("🖼️ Testimonios visuales")
@@ -128,6 +137,7 @@ with st.container():
     cols[2].image(endorsements["img3"], use_column_width=True)
     cols[3].image(endorsements["img4"], use_column_width=True)
 
+st.markdown("---")
 
 # ==== CONTACTO ====
 with st.container():
