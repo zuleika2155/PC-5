@@ -11,7 +11,7 @@ info = {
    "Intro": "✨ Comunicadora, publicista y apasionada por la creatividad, la tecnología y el impacto social ✨",
    "About": "💖 ¡Hola! Soy Zuleika y me interesa crear experiencias significativas a través de la comunicación, el diseño y las herramientas digitales. Creo en el poder de las ideas y la innovación para transformar realidades. Este portafolio es un espacio para mostrar lo que hago, cómo pienso y lo que quiero seguir construyendo. 💡✨",
    "City": "🇵🇪 Lima, Perú",
-   "Photo": """<a href='https://www.linkedin.com/in/zuleika-maytte-napuri-chinga-227172363/'><img src='https://i.imgur.com/h1myKrJ.png' width='200' alt='Zuleika'></a>""",
+   "Photo": "https://i.imgur.com/h1myKrJ.png",
    "Email": "zuleikanapuri8@gmail.com"
 }
 
@@ -22,26 +22,26 @@ endorsements = {
     "img4": "https://i.imgur.com/WvAF7Im.jpeg"
 }
 
-# ==== ESTILOS PERSONALIZADOS EN FONDO NEGRO CLARO ====
+# ==== ESTILOS PERSONALIZADOS ====
 st.markdown("""
     <style>
         .stApp {
-            background-color: #121212;  /* negro claro / gris muy oscuro */
-            color: #e0e0e0;
+            background-color: #5d4037;  /* marrón */
+            color: #fbe9e7;
         }
         h1, h2, h3, h4 {
-            color: #f1c40f;  /* amarillo dorado para destacar títulos */
+            color: #ffe0b2;
             font-family: 'Comic Sans MS', cursive, sans-serif;
         }
         .stSubheader, .stText, .stMarkdown {
-            color: #e0e0e0;
+            color: #fbe9e7;
         }
         a {
-            color: #f39c12;  /* naranja */
+            color: #ffccbc;
             text-decoration: none;
         }
         a:hover {
-            color: #f1c40f;
+            color: #fff3e0;
         }
         .emoji {
             font-size: 24px;
@@ -51,7 +51,7 @@ st.markdown("""
             margin: 10px 0;
         }
         hr {
-            border: 1px solid #444;
+            border: 1px solid #888;  /* gris */
             margin: 25px 0;
         }
     </style>
@@ -60,8 +60,17 @@ st.markdown("""
 # ==== INICIO ====
 st.markdown(f"<h1 style='text-align: center;'>{info['Full_Name']} 👩‍🎨</h1>", unsafe_allow_html=True)
 st.markdown(f"<h4 style='text-align: center;'>{info['Intro']}</h4>", unsafe_allow_html=True)
-st.markdown(f"<div style='text-align:center'>{info['Photo']}</div>", unsafe_allow_html=True)
 
+# Imagen y texto ¡Hola! en fila
+col_img, col_text = st.columns([1,1])
+with col_img:
+    st.image(info["Photo"], width=200)
+with col_text:
+    st.markdown("<h2 style='color:#ffe0b2; margin-top: 80px;'>¡Hola!</h2>", unsafe_allow_html=True)
+
+st.markdown("---")
+
+# ==== SOBRE MÍ ====
 with st.container():
     st.subheader("📖 Sobre mí")
     st.markdown(info["About"])
