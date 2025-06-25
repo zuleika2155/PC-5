@@ -120,13 +120,14 @@ with st.container():
 
 # ==== GALERÍA ====
 with st.container():
-    with st.container():
     st.subheader("🖼️ Testimonios visuales")
+
     cols = st.columns(4)
     cols[0].image(endorsements["img1"], use_column_width=True)
     cols[1].image(endorsements["img2"], use_column_width=True)
     cols[2].image(endorsements["img3"], use_column_width=True)
     cols[3].image(endorsements["img4"], use_column_width=True)
+
 
 # ==== CONTACTO ====
 with st.container():
