@@ -25,7 +25,7 @@ endorsements = {
     "img1": "https://i.imgur.com/Ijd7Kpf.jpeg",
     "img2": "https://i.imgur.com/RM31sfq.jpeg",
     "img3": "https://i.imgur.com/p1KQB0n.jpeg",
-    "img4": "https://i.imgur.com/WvAF7Im.jpeg"
+    "img4": "https://i.imgur.com/WvAF7Im.jpeg",
     "img5": "https://i.imgur.com/QZ2IEOo.jpeg"
 }
 
@@ -81,7 +81,7 @@ st.markdown(f"<h1 style='text-align: center;'>{info['Full_Name']} 👩‍🎨</h
 st.markdown(f"<h4 style='text-align: center;'>{info['Intro']}</h4>", unsafe_allow_html=True)
 
 # Imagen y texto ¡Hola! en columnas
-col_img, col_text = st.columns([1,1])
+col_img, col_text = st.columns([1, 1])
 with col_img:
     st.image(info["Photo"], width=220)
 with col_text:
@@ -99,8 +99,8 @@ with st.container():
         st.markdown(f"🌆 **Ciudad:** {info['City']}")
         st.markdown(f"📧 **Email:** [{info['Email']}](mailto:{info['Email']})")
     with col2:
-        st.markdown("📞 **Teléfono:** +51 938322658)")
-        st.markdown("🌐 **Sitio web:** [www.zuleikaportfolio.com]")
+        st.markdown("📞 **Teléfono:** +51 938 322 658")  # corregí paréntesis sobrante
+        st.markdown("🌐 **Sitio web:** [www.zuleikaportfolio.com](#)")  # añadí url para que sea clickable
 
 st.markdown("<hr>", unsafe_allow_html=True)
 
@@ -134,7 +134,7 @@ with st.container():
     st.subheader("📚 Certificaciones")
     st.write("""
     🎓 Curso de Comunicación Digital en PUCP (2023)  
-    🗓️ Certificación en Marketing y Comunicaciones con COREPUCP en la actualidad, puedes seguirnos en instagram como COREPUCP <3
+    🗓️ Certificación en Marketing y Comunicaciones con COREPUCP en la actualidad, puedes seguirnos en Instagram como COREPUCP <3
     """)
 
 st.markdown("<hr>", unsafe_allow_html=True)
@@ -155,7 +155,7 @@ st.markdown("<hr>", unsafe_allow_html=True)
 # ==== GALERÍA ====
 with st.container():
     st.subheader("🖼️ Testimonios visuales y trabajos.")
-    cols = st.columns(4)
+    cols = st.columns(5)
     cols[0].image(endorsements["img1"], use_column_width=True)
     cols[1].image(endorsements["img2"], use_column_width=True)
     cols[2].image(endorsements["img3"], use_column_width=True)
